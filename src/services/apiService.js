@@ -1,5 +1,5 @@
 export const getApi = async (url) => {
     let resp = await fetch(url);
-    let data = await JSON().resp;
+    let data = await resp.json();
     return data;
 }
