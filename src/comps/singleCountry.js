@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function MainComp() {
+function SingleCountry() {
     return (
         <div className="App">
             success
@@ -9,4 +9,4 @@ function MainComp() {
     );
 }
 
-export default MainComp;
+export default SingleCountry;
