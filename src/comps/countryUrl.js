@@ -47,15 +47,21 @@ function CountryUrl(props) {
     }, [ props.match.url ])
 
     return (
-        <div>
+        <div className="text-center mt-5">
             {notFound ?
 
                 <h1>not found</h1> : country ?
-                    <div className="d-flex">
-                        <div className="col-lg-6">
-                            <img src={country.flag} className="w-50" />
+                    <div>
+                        <div>
+                            <img src={country.flag} className="w-25" />
                         </div>
-                        {country.borders.map((item, i) => <Link to={`/country/${item}`} key={i}>{item}</Link>)}
+                        <h4 className='display-4'>{country.name}</h4>
+                        <div>Continent - {country.region}</div>
+                        Neighbors with borders:<span> </span>
+                        {country.borders.map((item, i) => <Link to={`/country/${item}`} key={i}>{item}, </Link>)}
+                        <div>Capital city - {country.capital}</div>
+                        <div>Currency - {country.currencies[ 0 ].name}{country.currencies[ 0 ].symbol}</div>
+
                     </div>
                     :
                     <h1>loading</h1>

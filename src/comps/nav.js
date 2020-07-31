@@ -18,7 +18,7 @@ function Navbar() {
     return (
         <div className="App">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="navbar-brand text-primary" href="#">Countries Encyclopedia</div>
+                <Link to="/" className="navbar-brand text-primary">Countries Encyclopedia</Link>
 
                 <div className="collapse navbar-collapse bg-light" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
